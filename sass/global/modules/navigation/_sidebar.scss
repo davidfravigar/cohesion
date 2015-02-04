@@ -1,0 +1,67 @@
+/**
+ * ----------------------------------------------------------------------
+ * Sidebar
+ * ----------------------------------------------------------------------
+ *
+ * Site Name:
+ * Author:
+ * Company:
+ * Version: 0.0.1
+ *
+ * ----------------------------------------------------------------------
+ */
+
+.sidebar{
+
+	.brand-logo{
+		background: $site-primary-color;
+		margin: 0;
+		border-bottom: 1px solid darken($site-secondary-color, 5%);
+
+		h1, h2, h3, h4, h5, h6, p{
+			color: #f9f9f9;
+		}
+
+		@media screen and (min-width: $break-xs){
+			padding: 10px;
+			h1{
+				font-size: $h5-size;
+			}
+		}
+
+		@media screen and (min-width: $break-lg){
+			padding: 15px 15px 10px 15px;
+
+			h1{
+				font-size: $h1-size;
+			}
+		}
+	}
+
+	nav{
+
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+
+		li{
+			display: block;
+		}
+
+		a{
+			padding: 20px;;
+			display: block;
+			text-decoration: none;
+			font-weight: 700;
+			font-size: $h3-size;
+			color: darken($site-secondary-color, 25%);
+
+			&:hover{
+				color: $site-primary-color;
+			}
+		}
+	}
+
+}
+

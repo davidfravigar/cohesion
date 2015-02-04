@@ -1,0 +1,123 @@
+/**
+ * ----------------------------------------------------------------------
+ * Off Canvas Navigation
+ * ----------------------------------------------------------------------
+ *
+ * Site Name:
+ * Author:
+ * Company:
+ * Version: 0.0.1
+ *
+ * TO DO
+ * Use jQuery to do the toggling
+ * Use jQuery to remove classes on window resize
+ *
+ * When finished
+ *
+ * ----------------------------------------------------------------------
+*/
+
+#menuShowLeft{
+	display: none;
+}
+
+.offcanvas-menu,
+.offcanvas-push,
+.offcanvas-menubar{
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.offcanvas-push{
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+
+	@media screen and (min-width: $break-lg){
+		/* depending on what menu you are using */
+		padding-left: $offcanvas-menu-width;
+	}
+}
+
+.push-to-right{
+	left: $offcanvas-menu-width;
+}
+
+.push-to-left{
+	left: -$offcanvas-menu-width;
+}
+
+.offcanvas-menu{
+	background: $offcanvas-menu-background-color;
+	position: fixed;
+}
+
+.offcanvas-vertical-menu{
+	width: $offcanvas-menu-width;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.offcanvas-left{
+	left: -$offcanvas-menu-width;
+
+	@media screen and (min-width: $break-lg){
+		left: 0;
+	}
+}
+
+.offcanvas-left.offcanvas-menu-open{
+	left: 0;
+}
+
+.offcanvas-container{
+	@include container();
+	padding: 15px 20px;
+	height: 100%;
+	padding-top: 60px;
+
+	@media screen and (min-width: $break-lg){
+		padding-top: 20px;
+	}
+}
+
+
+
+.toggle-nav{
+	padding: 10px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+
+	@media screen and (min-width: $break-lg){
+		display: none;
+	}
+
+	&:hover{
+		background: $site-primary-color;
+		border-radius: 5px;
+
+	}
+}
+
+.offcanvas-menubar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: $site-secondary-color;
+	width: 100%;
+	padding: 5px;
+
+	@media screen and (min-width: $break-lg){
+		display: none;
+	}
+}
+
+.offcanvas-menubar.push-to-right{
+	left: 240px;
+}

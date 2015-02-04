@@ -1,0 +1,92 @@
+/**
+ * ----------------------------------------------------------------------
+ * Base File
+ * ----------------------------------------------------------------------
+ *
+ * Site Name:
+ * Author:
+ * Company:
+ * Version:
+ *
+ * This File imports all the files that are needed for the site.
+ * Comment out what you don't need. The Sass Files are found in the Global
+ * folder so that they can be used across different parts of the site.
+ *
+ * ----------------------------------------------------------------------
+ * 1. Settings
+ * 2. Resets
+ * 3. Typography + fonts
+ * 4. Partials
+ * 5. Modules
+ * 	5.1 Navigation
+ * 	5.2 Off-canvas sidebars (I know these are navigation really but have been designed so they are empty containers that can hold anything so ner ner.)
+ * 6.
+ * 7.
+ * 8.
+ * 9.
+ * 10.
+ * ----------------------------------------------------------------------
+ */
+
+/**
+ * ----------------------------------------------------------------------
+ * 1. Settings
+ * ----------------------------------------------------------------------
+ * The Settings file holds all the mixin's that are needed for the framework
+ * to function correctly.
+ * ----------------------------------------------------------------------
+ */
+@import "settings/settings";
+
+/**
+ * ----------------------------------------------------------------------
+ * 2. Reset's
+ * ----------------------------------------------------------------------
+ * Do we need to explain these......
+ * ----------------------------------------------------------------------
+ */
+@import "../global/base/reset.scss";
+
+/**
+ * ----------------------------------------------------------------------
+ * 3. Typography + Fonts
+ * ----------------------------------------------------------------------
+ * Typography styles.
+ * ----------------------------------------------------------------------
+ */
+@import "../global/base/typography.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+/**
+ * ----------------------------------------------------------------------
+ * 4. Partials
+ * ----------------------------------------------------------------------
+ * Partials that will make the site look pretty!
+ * ----------------------------------------------------------------------
+ */
+@import "../global/partials/page-section";
+
+/**
+ * ----------------------------------------------------------------------
+ * 5 .modules
+ * ----------------------------------------------------------------------
+ * Modules are split up into a base file and then the desired styles are
+ * in separate files. This allows for modularity as well as small css
+ * files, unlike say Bootstrap which includes everything.
+ * ----------------------------------------------------------------------
+ */
+
+/* 5.1  Navigation */
+@import "../global/modules/navigation/base";
+@import "../global/modules/navigation/sidebar";
+@import "../global/modules/navigation/navbar";
+
+
+/* 5.2 Off-canvas Menus */
+@import "../global/modules/offcanvas";
+//@import "../global/modules/off-canvas-navigation";
+
+
+
+/* Pages */
+//@import "pages/homepage";

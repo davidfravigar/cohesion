@@ -1,0 +1,198 @@
+/**
+ * ----------------------------------------------------------------------
+ * Base Typography File
+ * ----------------------------------------------------------------------
+ *
+ * Site Name:
+ * Author:
+ * Company:
+ * Version:
+ *
+ * TO DO
+ * - Links
+ *
+ * ----------------------------------------------------------------------
+*/
+
+html,
+input,
+button,
+textarea{
+	-webkit-font-smoothing: antialiased;
+}
+
+body{
+	color: 									$body-font-color;
+	font-family: 						$body-font-stack;
+	line-height: 						$baseline;
+	text-rendering: 				optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 						$body-font-weight;
+	font-size: 							100%;
+}
+
+p{
+	font-size: 								$baseline;
+	line-height: 							$line-height;
+	margin-bottom: 						$line-height;
+	margin: 								0 0 $baseline;
+	-moz-osx-font-smoothing: grayscale;
+	word-break: 						break-all;
+ 	word-break: 						break-word;
+  -webkit-hyphens: 				auto;
+  -moz-hyphens: 					auto;
+  -ms-hyphens: 						auto;
+  hyphens: 								auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6{
+	color: 									$heading-font-color;
+	font-family: 						$heading-font-stack;
+	font-weight: 						$heading-font-weight;
+}
+
+h5,
+h6,
+.h5,
+.h6{
+	letter-spacing: 				1px;
+	text-transform: 				uppercase;
+	font-weight:   					$heading-font-weight - 200;
+}
+
+h1, .h1{
+	font-size: 							$h1-size;
+	line-height: 						$h1-lineheight;
+	margin-bottom: 					$h1-margin-bottom;
+}
+
+h2, .h2{
+	font-size: 							$h2-size;
+	line-height: 						$h2-lineheight;
+	margin-bottom: 					$h2-margin-bottom;
+}
+
+h3, .h3{
+	font-size: 							$h3-size;
+	line-height: 						$h3-lineheight;
+	margin-bottom: 					$h3-margin-bottom;
+}
+
+h4, .h4{
+	font-size: 							$h4-size;
+	line-height: 						$h4-lineheight;
+	margin-bottom: 					$h4-margin-bottom;
+}
+
+h5, .h5{
+	font-size: 							$h5-size;
+	line-height: 						$h5-lineheight;
+	margin-bottom: 					$h5-margin-bottom;
+}
+
+h6, .h5{
+	font-size: 							$h6-size;
+	line-height: 						$h6-lineheight;
+	margin-bottom: 					$h6-margin-bottom;
+}
+
+strong{
+	font-weight: 							bold;
+}
+
+em{
+	font-style: 							italic;
+}
+
+code, pre{
+	font-family: 							monospace, serif;
+  font-size: 								1em;
+}
+
+blockquote {
+ font-style: 								italic;
+}
+
+blockquote:before {
+ content: 									"\201C";
+ display: 									inline-block;
+ padding-right: 						.4em;
+}
+
+hr{
+	//border: 								0;
+	//background-colour: 				$hr-color;
+	//height: 								1px;
+	//margin: 								$baseline 0;
+}
+
+@media print{
+	* {
+		background: 						transparent !important;
+    color: 									#000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: 						none !important;
+    text-shadow: 						none !important;
+  }
+
+  p,
+	h2,
+	h3 {
+		orphans: 								3;
+    widows: 								3;
+  }
+
+  h2,
+	h3 {
+		page-break-after: 			avoid;
+	}
+}
+/**
+ * ----------------------------------------------------------------------
+ * Helper Classes
+ * ----------------------------------------------------------------------
+ */
+
+/**
+ * Alignment of text
+ */
+.text-left{
+	text-align: 					left;
+}
+
+.text-right{
+	text-align: 					right;
+}
+
+.text-center{
+	text-align: 					center;
+}
+
+.text-justify{
+	text-align: 					justify;
+}
+
+/**
+ * Transformation
+ */
+.text-uppercase{
+	text-transform: 			uppercase;
+}
+
+.text-lowercase{
+	text-transform: 			lowercase;
+}
+
+.text-caps{
+	text-transform: 				capitalize;
+}
