@@ -1,0 +1,44 @@
+/**
+ * ----------------------------------------------------------------------
+ * Horizontal Nav
+ * ----------------------------------------------------------------------
+ *
+ * Site Name:
+ * Author:
+ * Company:
+ * Version:
+ *
+ * ----------------------------------------------------------------------
+ */
+
+.nav-horizontal{
+	width: 100%;
+	border-top: 1px solid darken($site-secondary-color, 5%);
+	border-bottom: 1px solid darken($site-secondary-color, 5%);
+	padding: 20px 0;
+	margin-bottom: $baseline;
+
+	ul{
+
+	}
+
+	li{
+		display: inline;
+	}
+
+	a{
+		display: inline-block;
+		padding: 0 30px 0 0px;
+		font-size: $h4-size;
+		font-weight: 500;
+		color: darken($site-secondary-color, 25%);
+
+		&:hover{
+			color: $site-primary-color;
+		}
+	}
+
+	&:first-child{
+		padding-left: 0;
+	}
+}

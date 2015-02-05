@@ -41,10 +41,12 @@ $break-xl: 							1200px;
  * 2. Site Colors
  * ----------------------------------------------------------------------
  */
+/* add custom colors here and add them to the default settings */
 
 $site-background:				#FFFFFF;
 $site-primary-color:		#FFE361;
 $site-secondary-color: 	#D2D2D3;
+
 
 /**
  * ----------------------------------------------------------------------
@@ -53,14 +55,14 @@ $site-secondary-color: 	#D2D2D3;
  */
 
 @import "http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,500,700,500italic,700italic,900,900italic";
-
+/*
 $baseline:							1em;
 $line-height: 					1.5em;
-$body-font-color:				#222;
+$body-font-color:				darken($site-secondary-color, 40%);
 $body-font-stack:				'Roboto', sans-serif;
 $body-font-weight:			300;
 
-$heading-font-color:		$site-primary-color;
+$heading-font-color:		darken($site-secondary-color, 45%);
 $heading-font-stack:		'Roboto', sans-serif;
 $heading-font-weight:		700;
 
@@ -82,23 +84,44 @@ $h1-margin-bottom: 			.5em;
 $h2-margin-bottom: 			.6666666666666667em;;
 $h3-margin-bottom: 			1em;
 $h4-margin-bottom: 			1.142857142857143em;
-$h5-margin-bottom: 			1.333333333333333em;
+$h5-margin-bottom: 			1em;
 $h6-margin-bottom: 			1.5em;
+*/
 
+$body-font-family: "Helvetica Neue", Arial, sans-serif;
+$body-font-size: 106.25%;
+$body-line-height: 1.5em;
+$body-background: #f9f9f9;
+$body-font-color: #333;
+$body-font-weight: normal;
+
+$heading-font-family: "Helvetica Neue", Arial, sans-serif;
+$heading-font-weight: normal;
+
+$site-link-color: blue;
+$site-link-hover-color: red;
+
+$text-muted-color: grey;
+$text-warning-color: orange;
+$text-success-color: green;
+$text-error-color: red;
+
+$hr-top-color: grey;
+$hr-bottom-color: white;
 /**
  * ----------------------------------------------------------------------
  * 4. Grid
  * ----------------------------------------------------------------------
  */
 $susy: (
-  columns: 12,
-  container: 100%,
-  global-box-sizing: border-box,
-  gutters: 1/4,
-  math: fluid,
-  output: float,
-  gutter-postiton: inside,
-);
+		columns: 12,
+		container: 100%,
+		global-box-sizing: border-box,
+		gutters: 1/4,
+		math: fluid,
+		output: float,
+		gutter-postiton: split,
+	);
 
 /**
  * ----------------------------------------------------------------------

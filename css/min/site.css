@@ -38,8 +38,8 @@
  * 5. Modules
  * 	5.1 Navigation
  * 	5.2 Off-canvas sidebars (I know these are navigation really but have been designed so they are empty containers that can hold anything so ner ner.)
- * 6.
- * 7.
+ * 6. Layouts
+ * 7. Pages
  * 8.
  * 9.
  * 10.
@@ -88,12 +88,45 @@
  * 2. Site Colors
  * ----------------------------------------------------------------------
  */
+/* add custom colors here and add them to the default settings */
 /**
  * ----------------------------------------------------------------------
  * 3. Typography
  * ----------------------------------------------------------------------
  */
 @import "http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,500,700,500italic,700italic,900,900italic";
+/*
+$baseline:							1em;
+$line-height: 					1.5em;
+$body-font-color:				darken($site-secondary-color, 40%);
+$body-font-stack:				'Roboto', sans-serif;
+$body-font-weight:			300;
+
+$heading-font-color:		darken($site-secondary-color, 45%);
+$heading-font-stack:		'Roboto', sans-serif;
+$heading-font-weight:		700;
+
+$h1-size:								3em;
+$h2-size:								2.25em;
+$h3-size:								1.5em;
+$h4-size:								1.3125em;
+$h5-size:								1.125em;
+$h6-size:								1em;
+
+$h1-lineheight:					1em;
+$h2-lineheight:					1.333333333333333em;
+$h3-lineheight:					1em;
+$h4-lineheight:					1.142857142857143em;
+$h5-lineheight:					1.333333333333333em;
+$h6-lineheight:					1.5em;
+
+$h1-margin-bottom: 			.5em;
+$h2-margin-bottom: 			.6666666666666667em;;
+$h3-margin-bottom: 			1em;
+$h4-margin-bottom: 			1.142857142857143em;
+$h5-margin-bottom: 			1em;
+$h6-margin-bottom: 			1.5em;
+*/
 /**
  * ----------------------------------------------------------------------
  * 4. Grid
@@ -115,6 +148,21 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@viewport {
+  width: device-width;
+  zoom: 1.0; }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -140,6 +188,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
 body {
   line-height: 1; }
 
@@ -164,6 +217,30 @@ body {
 ul {
   padding: 0; }
 
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none; }
+
+img, video {
+  max-width: 100%;
+  height: auto; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+a:focus,
+button:focus {
+  outline: thin dotted;
+  outline: .294117647em auto -webkit-focus-ring-color;
+  outline-offset: -.142857143em; }
+
+a:hover, a:active {
+  outline: 0; }
+
 /**
  * ----------------------------------------------------------------------
  * 3. Typography + Fonts
@@ -179,11 +256,25 @@ ul {
  * Site Name:
  * Author:
  * Company:
- * Version:
+ * Version: 1.0.0
  *
- * TO DO
- * - Links
- *
+ * 1. body
+ * 2. Headings
+ * 3. links
+ * 4. sizes
+ * 5. lists
+ * 6. text colors
+ * 7. Hr
+ * 8. Emphasis
+ * 9. Blockquotes
+ * 10. Alignment/transform
+ * 11. code
+ * 12. Print
+ * ----------------------------------------------------------------------
+*/
+/**
+ * ----------------------------------------------------------------------
+ * 1. Body
  * ----------------------------------------------------------------------
 */
 html,
@@ -193,124 +284,205 @@ textarea {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  color: #222;
-  font-family: "Roboto", sans-serif;
-  line-height: 1em;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 106.25%;
+  line-height: 1.5em;
+  color: #333;
+  background: #f9f9f9;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-weight: 300;
-  font-size: 100%; }
+  font-weight: normal; }
+  @media (min-width: 992px) {
+    body {
+      line-height: 1.588235294; } }
 
 p {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 1.5em;
-  margin: 0 0 1em;
+  margin-bottom: 1.529411765em;
   -moz-osx-font-smoothing: grayscale;
-  word-break: break-all;
-  word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto; }
 
+/**
+ * ----------------------------------------------------------------------
+ * 2. headings
+ * ----------------------------------------------------------------------
+*/
 h1,
 h2,
 h3,
 h4,
 h5,
+h6 {
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  font-family: "Helvetica Neue", Arial, sans-serif; }
+
+h1, .h1 {
+  font-size: 1.529411765em;
+  padding-top: .5em; }
+  @media (min-width: 992px) {
+    h1, .h1 {
+      font-size: 1.764705882em; } }
+
+h2, .h2 {
+  font-size: 1.352941176em; }
+
+h3, .h3 {
+  font-size: 1.176470588em; }
+
+h4,
+h5,
 h6,
-.h1,
-.h2,
-.h3,
 .h4,
 .h5,
 .h6 {
-  color: #FFE361;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700; }
-
-h5,
-h6,
-.h5,
-.h6 {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 500; }
-
-h1, .h1 {
-  font-size: 3em;
-  line-height: 1em;
-  margin-bottom: 0.5em; }
-
-h2, .h2 {
-  font-size: 2.25em;
-  line-height: 1.3333333333em;
-  margin-bottom: 0.6666666667em; }
-
-h3, .h3 {
-  font-size: 1.5em;
-  line-height: 1em;
-  margin-bottom: 1em; }
+  font-size: .882352941em;
+  font-style: italic; }
 
 h4, .h4 {
-  font-size: 1.3125em;
-  line-height: 1.1428571429em;
-  margin-bottom: 1.1428571429em; }
+  text-transform: uppercase; }
 
-h5, .h5 {
-  font-size: 1.125em;
-  line-height: 1.3333333333em;
-  margin-bottom: 1.3333333333em; }
+/**
+ * ----------------------------------------------------------------------
+ * 3. links
+ * ----------------------------------------------------------------------
+*/
+a {
+  color: blue;
+  text-decoration: none; }
+  a:hover {
+    color: red;
+    text-decoration: underline; }
 
-h6, .h5 {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 1.5em; }
+a img {
+  border: none;
+  background: none; }
 
+a:hover img {
+  border: none;
+  background: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+/**
+ * ----------------------------------------------------------------------
+ * 4. Sizes
+ * ----------------------------------------------------------------------
+*/
+.small {
+  font-size: .882352941em;
+  line-height: 1.533333333; }
+
+.tall {
+  font-size: 1.166666667em;
+  line-height: 1.4; }
+  @media (min-width: 992px) {
+    .tall {
+      font-size: 1.352941176em; } }
+
+/**
+ * ----------------------------------------------------------------------
+ * 5. Lists
+ * ----------------------------------------------------------------------
+*/
+ul, ol {
+  margin-bottom: 1.529411765em;
+  margin-left: 2em; }
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0; }
+
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+.list-unstyled {
+  margin-left: 0;
+  list-style: none; }
+
+/**
+ * ----------------------------------------------------------------------
+ * 6. Colors
+ * ----------------------------------------------------------------------
+*/
+.text-muted {
+  color: grey; }
+
+.text-warning {
+  color: orange; }
+
+.text-success {
+  color: green; }
+
+.text-error {
+  color: red; }
+
+/**
+ * ----------------------------------------------------------------------
+ * 7. hr
+ * ----------------------------------------------------------------------
+*/
+hr {
+  margin: 2em auto;
+  border: 0;
+  border-top: 0.071428571em solid grey;
+  border-bottom: 0.071428571em solid white; }
+
+/**
+ * ----------------------------------------------------------------------
+ * 8. Emphasis
+ * ----------------------------------------------------------------------
+*/
 strong {
   font-weight: bold; }
 
 em {
-  font-style: italic; }
+  font-size: italic; }
 
-code, pre {
-  font-family: monospace, serif;
-  font-size: 1em; }
+sub, sup {
+  position: relative;
+  font-size: 85%;
+  font-weight: bold;
+  line-height: 0;
+  vertical-align: baseline;
+  margin-left: .3em; }
 
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/**
+ * ----------------------------------------------------------------------
+ * 9. Blockquotes
+ * ----------------------------------------------------------------------
+*/
 blockquote {
-  font-style: italic; }
+  border-left: 0.235294118em solid grey;
+  margin-bottom: 1.529411765em;
+  padding-left: 1.529411765em;
+  padding-right: 1.529411765em; }
 
-blockquote:before {
-  content: "\201C";
-  display: inline-block;
-  padding-right: .4em; }
+blockquote, q {
+  quotes: none; }
 
-@media print {
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster: h5bp.com/s */
-    box-shadow: none !important;
-    text-shadow: none !important; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; } }
 /**
  * ----------------------------------------------------------------------
- * Helper Classes
+ * 10. Alignment classes
  * ----------------------------------------------------------------------
- */
-/**
- * Alignment of text
- */
+*/
 .text-left {
   text-align: left; }
 
@@ -323,9 +495,6 @@ blockquote:before {
 .text-justify {
   text-align: justify; }
 
-/**
- * Transformation
- */
 .text-uppercase {
   text-transform: uppercase; }
 
@@ -335,6 +504,67 @@ blockquote:before {
 .text-caps {
   text-transform: capitalize; }
 
+/**
+ * ----------------------------------------------------------------------
+ * 11. code
+ * ----------------------------------------------------------------------
+*/
+code, pre {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * ----------------------------------------------------------------------
+ * 12. Print
+ * ----------------------------------------------------------------------
+*/
+@media print {
+  /*  Universal selector.
+   *  Reset all content to transparent background,
+   *  black color, and remove box and text shadows. */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /*  Specifies page margin */
+  @page {
+    margin: 0.5cm; }
+  /*  Underline all links */
+  a, a:visited {
+    text-decoration: underline; }
+
+  /*  Show URL after links */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /*  Don't show URL for internal links */
+  a[href^="#"]:after {
+    content: ""; }
+
+  /*  Specifies the minimum number of lines to print at the top and bottom of a page. */
+  p, h1, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /*  Avoid inserting a page break after headers */
+  h1, h2, h3 {
+    page-break-after: avoid; }
+
+  /*  Change border color on blockquotes and preformatted text.
+   *  Avoid page breaks inside the content */
+  pre, blockquote {
+    border-color: #999;
+    page-break-inside: avoid; }
+
+  /*  Displayed as a table header row group */
+  thead {
+    display: table-header-group; }
+
+  /*  Avoid inserting a page break inside table rows and images */
+  tr, img {
+    page-break-inside: avoid; } }
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2134,20 +2364,7 @@ blockquote:before {
  */
 /**
  * ----------------------------------------------------------------------
- * Page Section  File
- * ----------------------------------------------------------------------
- *
- * Site Name:
- * Author:
- * Company:
- * Version:
- *
- * ----------------------------------------------------------------------
-*/
-/* Settings */
-/**
- * ----------------------------------------------------------------------
- * 5 .modules
+ * 5. Modules
  * ----------------------------------------------------------------------
  * Modules are split up into a base file and then the desired styles are
  * in separate files. This allows for modularity as well as small css
@@ -2157,46 +2374,21 @@ blockquote:before {
 /* 5.1  Navigation */
 /**
  * ----------------------------------------------------------------------
- * Sidebar
+ * Navigation Base
  * ----------------------------------------------------------------------
  *
  * Site Name:
  * Author:
  * Company:
- * Version: 0.0.1
+ * Version:
  *
  * ----------------------------------------------------------------------
  */
-.sidebar .brand-logo {
-  background: #FFE361;
-  margin: 0;
-  border-bottom: 1px solid #c5c5c6; }
-  .sidebar .brand-logo h1, .sidebar .brand-logo h2, .sidebar .brand-logo h3, .sidebar .brand-logo h4, .sidebar .brand-logo h5, .sidebar .brand-logo h6, .sidebar .brand-logo p {
-    color: #f9f9f9; }
-  @media screen and (min-width: 320px) {
-    .sidebar .brand-logo {
-      padding: 10px; }
-      .sidebar .brand-logo h1 {
-        font-size: 1.125em; } }
-  @media screen and (min-width: 992px) {
-    .sidebar .brand-logo {
-      padding: 15px 15px 10px 15px; }
-      .sidebar .brand-logo h1 {
-        font-size: 3em; } }
-.sidebar nav ul {
-  margin: 0;
-  padding: 0; }
-.sidebar nav li {
-  display: block; }
-.sidebar nav a {
-  padding: 20px;
-  display: block;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.5em;
-  color: #929294; }
-  .sidebar nav a:hover {
-    color: #FFE361; }
+.nav ul {
+  list-style-type: none;
+  text-decoration: none; }
+.nav a {
+  text-decoration: none; }
 
 /* 5.2 Off-canvas Menus */
 /**
@@ -2264,12 +2456,12 @@ blockquote:before {
   left: 0; }
 
 .offcanvas-container {
+  height: 100%;
+  padding-top: 60px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 15px 20px;
-  height: 100%;
-  padding-top: 60px; }
+  padding: 20px; }
   .offcanvas-container:after {
     content: " ";
     display: block;
@@ -2277,6 +2469,15 @@ blockquote:before {
   @media screen and (min-width: 992px) {
     .offcanvas-container {
       padding-top: 20px; } }
+
+.offcanvas-container-inner {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .offcanvas-container-inner:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 .toggle-nav {
   padding: 10px;
@@ -2304,4 +2505,80 @@ blockquote:before {
 .offcanvas-menubar.push-to-right {
   left: 240px; }
 
+/**
+ * ----------------------------------------------------------------------
+ * 6. Layouts
+ * ----------------------------------------------------------------------
+ * Modules are split up into a base file and then the desired styles are
+ * in separate files. This allows for modularity as well as small css
+ * files, unlike say Bootstrap which includes everything.
+ * ----------------------------------------------------------------------
+ */
+/**
+ * ----------------------------------------------------------------------
+ * 7. Pages
+ * ----------------------------------------------------------------------
+ * Modules are split up into a base file and then the desired styles are
+ * in separate files. This allows for modularity as well as small css
+ * files, unlike say Bootstrap which includes everything.
+ * ----------------------------------------------------------------------
+ */
 /* Pages */
+/**
+ * ----------------------------------------------------------------------
+ * Homepage File
+ * ----------------------------------------------------------------------
+ *
+ * Site Name:
+ * Author:
+ * Company:
+ * Version:
+ *
+ * ----------------------------------------------------------------------
+ */
+#site-header h1 {
+  display: none; }
+
+.page-section {
+  margin-bottom: 40px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; }
+  .page-section:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .page-section header {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .page-section article {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px; }
+  .page-section .first {
+    width: 32.2033898305%;
+    float: left;
+    margin-right: 1.6949152542%; }
+  .page-section .last {
+    width: 66.1016949153%;
+    float: right;
+    margin-right: 0; }
+  .page-section footer {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    border-top: 1px solid #c5c5c6;
+    border-bottom: 1px solid #c5c5c6;
+    padding-top: 20px; }
+    .page-section footer a {
+      text-decoration: none;
+      padding-left: 20px;
+      color: #D2D2D3; }
+      .page-section footer a:hover {
+        color: #929294; }

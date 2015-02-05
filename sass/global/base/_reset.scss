@@ -3,6 +3,12 @@
    License: none (public domain)
 */
 
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+   @-moz-viewport { width: device-width; zoom: 1.0; }
+    @-ms-viewport { width: device-width; zoom: 1.0; }
+     @-o-viewport { width: device-width; zoom: 1.0; }
+        @viewport { width: device-width; zoom: 1.0; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,6 +34,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html {
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+
 body {
 	line-height: 1;
 }
@@ -49,3 +62,33 @@ table {
 
 body { margin:0; }
 ul { padding:0; }
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+a:focus,
+button:focus {
+    outline: thin dotted;
+    outline: .294117647em auto -webkit-focus-ring-color;
+    outline-offset: -.142857143em;
+}
+
+a:hover, a:active {
+    outline: 0;
+}

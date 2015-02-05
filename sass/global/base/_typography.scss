@@ -6,11 +6,26 @@
  * Site Name:
  * Author:
  * Company:
- * Version:
+ * Version: 1.0.0
  *
- * TO DO
- * - Links
- *
+ * 1. body
+ * 2. Headings
+ * 3. links
+ * 4. sizes
+ * 5. lists
+ * 6. text colors
+ * 7. Hr
+ * 8. Emphasis
+ * 9. Blockquotes
+ * 10. Alignment/transform
+ * 11. code
+ * 12. Print
+ * ----------------------------------------------------------------------
+*/
+
+/**
+ * ----------------------------------------------------------------------
+ * 1. Body
  * ----------------------------------------------------------------------
 */
 
@@ -22,150 +37,248 @@ textarea{
 }
 
 body{
-	color: 									$body-font-color;
-	font-family: 						$body-font-stack;
-	line-height: 						$baseline;
-	text-rendering: 				optimizeLegibility;
+	font-family: 		$body-font-family;
+	font-size:  		$body-font-size;
+	line-height: 		$body-line-height;
+	color: 					$body-font-color;
+	background: 		$body-background;
+	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	font-weight: 						$body-font-weight;
-	font-size: 							100%;
+	font-weight: $body-font-weight;
+
+	@media (min-width: $break-lg){
+		line-height: 		1.588235294;
+	}
 }
 
-p{
-	font-size: 								$baseline;
-	line-height: 							$line-height;
-	margin-bottom: 						$line-height;
-	margin: 								0 0 $baseline;
-	-moz-osx-font-smoothing: grayscale;
-	word-break: 						break-all;
- 	word-break: 						break-word;
-  -webkit-hyphens: 				auto;
-  -moz-hyphens: 					auto;
-  -ms-hyphens: 						auto;
-  hyphens: 								auto;
+p {
+    margin-bottom: 	1.529411765em;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-hyphens: 				auto;
+  	-moz-hyphens: 					auto;
+  	-ms-hyphens: 						auto;
+  	hyphens: 								auto;
 }
+
+/**
+ * ----------------------------------------------------------------------
+ * 2. headings
+ * ----------------------------------------------------------------------
+*/
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6{
-	color: 									$heading-font-color;
-	font-family: 						$heading-font-stack;
-	font-weight: 						$heading-font-weight;
+h6{
+	line-height: 1.2;
+	font-weight: $heading-font-weight;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  font-family: $heading-font-family;
+
 }
 
+h1, .h1 {
+    font-size: 1.529411765em;
+    padding-top: .5em;
+
+    @media (min-width: $break-lg){
+    	font-size: 1.764705882em;
+    }
+}
+
+h2, .h2 {
+    font-size: 1.352941176em;
+}
+
+h3, .h3 {
+    font-size: 1.176470588em;
+}
+
+h4,
 h5,
 h6,
+.h4,
 .h5,
-.h6{
-	letter-spacing: 				1px;
-	text-transform: 				uppercase;
-	font-weight:   					$heading-font-weight - 200;
+.h6 {
+    font-size: .882352941em;
+    font-style: italic;
 }
 
-h1, .h1{
-	font-size: 							$h1-size;
-	line-height: 						$h1-lineheight;
-	margin-bottom: 					$h1-margin-bottom;
+h4, .h4 {
+    text-transform: uppercase;
 }
 
-h2, .h2{
-	font-size: 							$h2-size;
-	line-height: 						$h2-lineheight;
-	margin-bottom: 					$h2-margin-bottom;
+/**
+ * ----------------------------------------------------------------------
+ * 3. links
+ * ----------------------------------------------------------------------
+*/
+a{
+	color: $site-link-color;
+	text-decoration: none;
+
+	&:hover{
+		color: $site-link-hover-color;
+		text-decoration: underline;
+	}
 }
 
-h3, .h3{
-	font-size: 							$h3-size;
-	line-height: 						$h3-lineheight;
-	margin-bottom: 					$h3-margin-bottom;
+a img {
+    border: none;
+    background: none;
 }
 
-h4, .h4{
-	font-size: 							$h4-size;
-	line-height: 						$h4-lineheight;
-	margin-bottom: 					$h4-margin-bottom;
+a:hover img {
+    border: none;
+    background: none;
+    opacity:0.8;
+    filter:alpha(opacity=80);
 }
 
-h5, .h5{
-	font-size: 							$h5-size;
-	line-height: 						$h5-lineheight;
-	margin-bottom: 					$h5-margin-bottom;
+/**
+ * ----------------------------------------------------------------------
+ * 4. Sizes
+ * ----------------------------------------------------------------------
+*/
+.small{
+	font-size: .882352941em;
+  line-height: 1.533333333;
 }
 
-h6, .h5{
-	font-size: 							$h6-size;
-	line-height: 						$h6-lineheight;
-	margin-bottom: 					$h6-margin-bottom;
+.tall{
+	font-size: 1.166666667em;
+  line-height: 1.4;
+
+  @media (min-width: $break-lg){
+  	font-size: 1.352941176em;
+  }
 }
+
+/**
+ * ----------------------------------------------------------------------
+ * 5. Lists
+ * ----------------------------------------------------------------------
+*/
+
+ul, ol {
+    margin-bottom: 1.529411765em;
+    margin-left: 2em;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+.list-unstyled {
+    margin-left: 0;
+    list-style: none;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * 6. Colors
+ * ----------------------------------------------------------------------
+*/
+
+.text-muted{
+	color: $text-muted-color;
+}
+
+.text-warning{
+	color: $text-warning-color;
+}
+
+.text-success{
+	color: $text-success-color;
+}
+
+.text-error{
+	color: $text-error-color;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * 7. hr
+ * ----------------------------------------------------------------------
+*/
+
+hr{
+	margin: 2em auto;
+  border: 0;
+  border-top: .071428571em solid $hr-top-color;
+  border-bottom: .071428571em solid $hr-bottom-color;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * 8. Emphasis
+ * ----------------------------------------------------------------------
+*/
 
 strong{
-	font-weight: 							bold;
+	font-weight: bold;
 }
 
 em{
-	font-style: 							italic;
+	font-size: italic;
 }
 
-code, pre{
-	font-family: 							monospace, serif;
-  font-size: 								1em;
+sub, sup {
+    position: relative;
+    font-size: 85%;
+    font-weight: bold;
+    line-height: 0;
+    vertical-align: baseline;
+    margin-left: .3em;
 }
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * 9. Blockquotes
+ * ----------------------------------------------------------------------
+*/
 
 blockquote {
- font-style: 								italic;
+    border-left: .235294118em solid $text-muted-color;
+    margin-bottom: 1.529411765em;
+    padding-left: 1.529411765em;
+    padding-right: 1.529411765em;
 }
 
-blockquote:before {
- content: 									"\201C";
- display: 									inline-block;
- padding-right: 						.4em;
+blockquote, q {
+    quotes: none;
 }
 
-hr{
-	//border: 								0;
-	//background-colour: 				$hr-color;
-	//height: 								1px;
-	//margin: 								$baseline 0;
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
 }
 
-@media print{
-	* {
-		background: 						transparent !important;
-    color: 									#000 !important; /* Black prints faster: h5bp.com/s */
-    box-shadow: 						none !important;
-    text-shadow: 						none !important;
-  }
-
-  p,
-	h2,
-	h3 {
-		orphans: 								3;
-    widows: 								3;
-  }
-
-  h2,
-	h3 {
-		page-break-after: 			avoid;
-	}
-}
 /**
  * ----------------------------------------------------------------------
- * Helper Classes
+ * 10. Alignment classes
  * ----------------------------------------------------------------------
- */
-
-/**
- * Alignment of text
- */
+*/
 .text-left{
 	text-align: 					left;
 }
@@ -182,9 +295,6 @@ hr{
 	text-align: 					justify;
 }
 
-/**
- * Transformation
- */
 .text-uppercase{
 	text-transform: 			uppercase;
 }
@@ -195,4 +305,81 @@ hr{
 
 .text-caps{
 	text-transform: 				capitalize;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * 11. code
+ * ----------------------------------------------------------------------
+*/
+code, pre{
+	font-family: 							monospace, serif;
+  font-size: 								1em;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * 12. Print
+ * ----------------------------------------------------------------------
+*/
+@media print {
+
+    /*  Universal selector.
+     *  Reset all content to transparent background,
+     *  black color, and remove box and text shadows. */
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /*  Specifies page margin */
+    @page {
+        margin: 0.5cm;
+    }
+
+    /*  Underline all links */
+    a, a:visited {
+        text-decoration: underline;
+    }
+
+    /*  Show URL after links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    /*  Don't show URL for internal links */
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    /*  Specifies the minimum number of lines to print at the top and bottom of a page. */
+    p, h1, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /*  Avoid inserting a page break after headers */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    /*  Change border color on blockquotes and preformatted text.
+     *  Avoid page breaks inside the content */
+    pre, blockquote {
+        border-color: #999;
+        page-break-inside: avoid;
+    }
+
+    /*  Displayed as a table header row group */
+    thead {
+        display: table-header-group;
+    }
+
+    /*  Avoid inserting a page break inside table rows and images */
+    tr, img {
+        page-break-inside: avoid;
+    }
+
 }

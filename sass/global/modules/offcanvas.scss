@@ -75,14 +75,18 @@
 }
 
 .offcanvas-container{
-	@include container();
-	padding: 15px 20px;
 	height: 100%;
 	padding-top: 60px;
+	@include container();
+	padding: 20px;
 
 	@media screen and (min-width: $break-lg){
 		padding-top: 20px;
 	}
+}
+
+.offcanvas-container-inner{
+	@include container();
 }
 
 

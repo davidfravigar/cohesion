@@ -919,6 +919,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/intro.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/intro.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1006,15 +1015,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/sass\/css\/_base.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/css\/_base.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/sass\/global\/base\/_reset.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1046,15 +1046,6 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
-		},
-	"\/sass\/global\/css\/off-canvas.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/global\/css\/off-canvas.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/sass\/global\/modules\/_off-canvas.old.scss": {
 		"createSourceMap": 0,
@@ -1312,15 +1303,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/global\/partials\/_links.scss": {
+	"\/sass\/global\/partials\/_grid.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/global\/partials\/_links.scss",
-		"outputAbbreviatedPath": "\/sass\/global\/css\/_links.css",
+		"inputAbbreviatedPath": "\/sass\/global\/partials\/_grid.scss",
+		"outputAbbreviatedPath": "\/sass\/global\/css\/_grid.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1337,22 +1328,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/global\/partials\/_navigation.scss",
 		"outputAbbreviatedPath": "\/sass\/global\/css\/_navigation.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/sass\/global\/partials\/_page-section.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/global\/partials\/_page-section.scss",
-		"outputAbbreviatedPath": "\/sass\/global\/css\/_page-section.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

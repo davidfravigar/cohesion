@@ -20,8 +20,8 @@
  * 5. Modules
  * 	5.1 Navigation
  * 	5.2 Off-canvas sidebars (I know these are navigation really but have been designed so they are empty containers that can hold anything so ner ner.)
- * 6.
- * 7.
+ * 6. Layouts
+ * 7. Pages
  * 8.
  * 9.
  * 10.
@@ -46,6 +46,7 @@
  * ----------------------------------------------------------------------
  */
 @import "../global/base/reset.scss";
+//@import "../global/vendor/normalize.scss";
 
 /**
  * ----------------------------------------------------------------------
@@ -64,11 +65,11 @@
  * Partials that will make the site look pretty!
  * ----------------------------------------------------------------------
  */
-@import "../global/partials/page-section";
+//@import "../global/partials/page-section"; /* Perhaps move this to site */
 
 /**
  * ----------------------------------------------------------------------
- * 5 .modules
+ * 5. Modules
  * ----------------------------------------------------------------------
  * Modules are split up into a base file and then the desired styles are
  * in separate files. This allows for modularity as well as small css
@@ -78,15 +79,34 @@
 
 /* 5.1  Navigation */
 @import "../global/modules/navigation/base";
-@import "../global/modules/navigation/sidebar";
-@import "../global/modules/navigation/navbar";
+//@import "../global/modules/navigation/sidebar";
+//@import "../global/modules/navigation/horizontal-menu";
+//@import "../global/modules/navigation/navbar";
 
 
 /* 5.2 Off-canvas Menus */
 @import "../global/modules/offcanvas";
-//@import "../global/modules/off-canvas-navigation";
 
 
+/**
+ * ----------------------------------------------------------------------
+ * 6. Layouts
+ * ----------------------------------------------------------------------
+ * Modules are split up into a base file and then the desired styles are
+ * in separate files. This allows for modularity as well as small css
+ * files, unlike say Bootstrap which includes everything.
+ * ----------------------------------------------------------------------
+ */
+//@import "layout/grid";
 
+/**
+ * ----------------------------------------------------------------------
+ * 7. Pages
+ * ----------------------------------------------------------------------
+ * Modules are split up into a base file and then the desired styles are
+ * in separate files. This allows for modularity as well as small css
+ * files, unlike say Bootstrap which includes everything.
+ * ----------------------------------------------------------------------
+ */
 /* Pages */
-//@import "pages/homepage";
+@import "pages/homepage";
